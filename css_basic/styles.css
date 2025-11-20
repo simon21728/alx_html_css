@@ -1,40 +1,109 @@
-/* Make body a flex container in column direction */
+/* ===== GENERAL STYLES ===== */
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* ensures body fills the viewport */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1a1a2e, #162447);
+    color: #fff;
+}
+
+header h1 {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 
-/* Header and Footer */
-header, footer {
-    background-color: #007bff; /* Example color */
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* ===== NAVIGATION ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 0 0 0;
+    margin: 0;
 }
 
-/* Main container */
+nav a {
+    text-decoration: none;
+    color: #ffd166;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #06d6a0;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 2rem; /* Make it bigger than other links */
+    margin-right: 10px;
+}
+
+/* ===== MAIN CONTENT ===== */
 main {
-    display: flex;          /* Make main a flex container */
-    flex-direction: row;    /* Row: article + aside */
-    flex: auto;             /* Allow main to expand */
-    min-height: 400px;      /* Optional: ensures enough height */
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Article takes 2/3 of main */
-article {
-    flex: 2;
-    padding: 20px;
-    overflow-y: auto;       /* Scroll if content is too tall */
-    background-color: #f9f9f9;
+main section {
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Aside takes 1/3 of main */
-aside {
-    flex: 1;
+main h2 {
+    color: #1a1a2e;
+    margin-top: 0;
+}
+
+main p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
     padding: 20px;
-    overflow-y: auto;       /* Scroll if content is too tall */
-    background-color: #e9ecef;
+    background-color: #1a1a2e;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    main {
+        margin: 20px;
+    }
 }
