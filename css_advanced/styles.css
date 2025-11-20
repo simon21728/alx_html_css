@@ -1,93 +1,35 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Quotes Section */
+.quotes {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
 }
 
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.5;
-    color: #000;
-    background-color: #f9f9f9;
+.quotes h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff; /* Example Figma primary color */
 }
 
-/* Header */
-header {
-    background-color: #2ecc71; /* green from Figma */
-    padding: 15px 40px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #fff;
-}
-
-header nav img.logo {
-    height: 40px; /* adjust according to Figma */
-}
-
-/* Banner / Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 40px;
-    background-color: #000; /* black background from Figma */
-    color: #fff;
-}
-
-.hero .hero-text {
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
+.quote-container {
+    background-color: #f1f1f1;
+    padding: 25px 30px;
     margin-bottom: 30px;
+    border-left: 5px solid #007bff;
+    border-radius: 8px;
+    position: relative;
 }
 
-.hero button {
-    padding: 12px 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #e91e63; /* bright accent from Figma */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.quote-container blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 0 10px 0;
 }
 
-.hero button:hover {
-    background-color: #c2185b;
-}
-
-/* Hero Image (right side circle) */
-.hero .hero-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #ff00ff; /* placeholder pink from Figma */
+.quote-container .author {
+    font-weight: bold;
+    color: #555;
+    text-align: right;
 }
