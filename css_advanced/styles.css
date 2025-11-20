@@ -33,3 +33,55 @@
     color: #555;
     text-align: right;
 }
+
+/* Videos Section */
+.videos {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.videos h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff; /* Primary Figma color */
+}
+
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card img {
+    width: 100%;
+    display: block;
+}
+
+.video-card h3 {
+    font-size: 1.2rem;
+    margin: 15px;
+    color: #333;
+}
+
+.video-card p {
+    font-size: 0.95rem;
+    margin: 0 15px 15px 15px;
+    color: #555;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
