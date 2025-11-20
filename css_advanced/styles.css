@@ -1,87 +1,147 @@
-/* Quotes Section */
-.quotes {
-    max-width: 800px;
-    margin: 60px auto;
-    text-align: center;
-    padding: 20px;
+/* ===========================
+   GLOBALS
+=========================== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f1e33;
+    color: #fff;
 }
 
-.quotes h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #007bff; /* Example Figma primary color */
-}
-
-.quote-container {
-    background-color: #f1f1f1;
-    padding: 25px 30px;
-    margin-bottom: 30px;
-    border-left: 5px solid #007bff;
-    border-radius: 8px;
-    position: relative;
-}
-
-.quote-container blockquote {
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #333;
-    margin: 0 0 10px 0;
-}
-
-.quote-container .author {
-    font-weight: bold;
-    color: #555;
-    text-align: right;
-}
-
-/* Videos Section */
-.videos {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.videos h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #007bff; /* Primary Figma color */
-}
-
-.video-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.video-card {
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.video-card img {
+/* ===========================
+   HEADER
+=========================== */
+header {
+    position: absolute;
+    top: 0;
     width: 100%;
-    display: block;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
 }
 
-.video-card h3 {
-    font-size: 1.2rem;
-    margin: 15px;
-    color: #333;
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.video-card p {
-    font-size: 0.95rem;
-    margin: 0 15px 15px 15px;
-    color: #555;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-.video-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* ===========================
+   HERO / BANNER
+=========================== */
+.hero {
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+    text-align: center;
+
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, #0f1e33),
+        url("CSS Advanced/Object.png")
+        center/cover no-repeat;
+}
+
+/* Main title */
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* SMILES / GRIN / LAUGH */
+.mini-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.mini-nav span {
+    font-weight: 500;
+}
+
+/* CTA Button */
+.cta {
+    background: #c271ff;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    background: #a34fe0;
+}
+
+/* Learn from the pros */
+.subtext {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.purple {
+    color: #c271ff;
+    font-weight: 600;
+}
+
+/* ===========================
+   PRO LIST
+=========================== */
+.pros {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.pro {
+    text-align: center;
+    width: 180px;
+}
+
+.pro img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pro h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.pro p {
+    font-size: 13px;
+    opacity: 0.8;
 }
