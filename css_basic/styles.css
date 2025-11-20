@@ -1,0 +1,40 @@
+/* Make body a flex container in column direction */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensures body fills the viewport */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #007bff; /* Example color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main container */
+main {
+    display: flex;          /* Make main a flex container */
+    flex-direction: row;    /* Row: article + aside */
+    flex: auto;             /* Allow main to expand */
+    min-height: 400px;      /* Optional: ensures enough height */
+}
+
+/* Article takes 2/3 of main */
+article {
+    flex: 2;
+    padding: 20px;
+    overflow-y: auto;       /* Scroll if content is too tall */
+    background-color: #f9f9f9;
+}
+
+/* Aside takes 1/3 of main */
+aside {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;       /* Scroll if content is too tall */
+    background-color: #e9ecef;
+}
