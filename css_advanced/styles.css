@@ -1,69 +1,68 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1624;
+  color: #fff;
 }
 
-.videos {
-    width: 80%;
-    margin: 50px auto;
-    text-align: center;
+.membership {
+  text-align: center;
+  padding: 60px 20px;
+  background: #071321;
 }
 
-.videos h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    font-weight: bold;
+.membership h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 300;
 }
 
-.video-grid {
-    display: grid;  
-    grid-template-columns: 1;
-    gap: 30px;
+.membership h2 span {
+  color: #b45bff;
+  font-weight: 600;
 }
 
-
-.video-card {
-    text-align: left;
+/* ONE COLUMN VERTICAL STACK */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;        /* space between items */
+  margin-bottom: 40px;
 }
 
-.video-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
+.feature-box {
+  max-width: 400px;
 }
 
-.video-card h3 {
-    margin: 15px 0 8px;
-    font-size: 20px;
+.icon {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #b45bff;
 }
 
-.video-card p {
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 15px;
+.feature-box h3 {
+  margin-bottom: 8px;
 }
 
-.author {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.feature-box p {
+  color: #b5b5b5;
+  font-size: 14px;
 }
 
-.author img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 10px;
+/* Button */
+.btn {
+  padding: 12px 30px;
+  background: #b45bff;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.author span {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.duration {
-    font-size: 14px;
-    color: #999;
-    font-weight: bold;
+.btn:hover {
+  opacity: 0.8;
 }
