@@ -1,21 +1,40 @@
-<header>
-    <nav>
-        <img src="images/logo.png" alt="Logo" class="logo">
-        <ul>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div class="hero-text">
+    <!-- Banner / About Me Section -->
+    <section class="about-me">
         <h1>About Me</h1>
-        <p>Short description or introduction goes here.</p>
-        <button>Download PDF</button>
-    </div>
-    <div class="hero-image"></div>
-</section>
+        <form class="bio-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name">
+            
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" placeholder="Write a short bio..."></textarea>
+            
+            <button type="button">Download Resume</button>
+        </form>
+        <div class="profile-image">
+            <img src="CSS Advanced/Object.png" alt="Profile Image">
+        </div>
+    </section>
+</body>
+</html>
