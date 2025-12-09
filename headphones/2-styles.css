@@ -1,0 +1,71 @@
+/* -----------------------------------
+   OUR RESULTS SECTION
+------------------------------------ */
+.our-results {
+    background: url("images/headphones_hero_2.jpg") no-repeat center/cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.our-results h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.our-results .section-description {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+/* RESULTS GRID */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* INDIVIDUAL RESULT ITEM */
+.result-item {
+    text-align: center;
+}
+
+/* THE ROUND SHAPES */
+.result-shape {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: rgba(255, 101, 101, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.result-shape h3 {
+    font-size: 32px;
+    color: #fff;
+}
+
+/* LABEL UNDER CIRCLE */
+.result-item p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 480px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .result-shape {
+        width: 120px;
+        height: 120px;
+    }
+
+    .result-shape h3 {
+        font-size: 28px;
+    }
+}
