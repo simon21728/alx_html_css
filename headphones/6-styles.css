@@ -1,0 +1,87 @@
+/* RESET + VARIABLES */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#FF6565;
+  --white:#fff;
+  --muted:#666;
+  --max-width:1000px;
+  --pentagon-size:160px;
+}
+
+/* Base */
+body{ font-family:"Source Sans Pro", Arial, sans-serif; color:#111; line-height:1.4 }
+.container{ max-width:var(--max-width); margin:0 auto; padding:20px }
+
+/* Header / hero */
+.site-header{ background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)); color:var(--white) }
+.header-inner{ display:flex; justify-content:space-between; align-items:center; padding:18px 0 }
+.logo img{ height:40px }
+.hero{ padding:60px 0 40px; text-align:center }
+.hero h1{ font-size:40px; margin-bottom:8px }
+.hero p{ color:var(--muted) }
+
+/* Results section (no images) */
+.our-results{ padding:60px 0; text-align:center }
+.section-description{ color:var(--muted); max-width:700px; margin:8px auto 26px }
+
+/* PENTAGON GRID */
+/* each shape is a square div, clipped to pentagon with clip-path */
+.pentagon-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+  align-items:start;
+  justify-items:center;
+}
+
+/* pentagon item wrapper */
+.pentagon{ width:100%; max-width:220px; text-align:center; }
+
+/* the actual pentagon */
+.shape{
+  width:var(--pentagon-size);
+  height:var(--pentagon-size);
+  margin:0 auto 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--white);
+  font-weight:700;
+  font-size:20px;
+  /* clip to a regular pentagon */
+  clip-path: polygon(
+    50% 0%,   /* top */
+    95% 35%,  /* top-right */
+    78% 95%,  /* bottom-right */
+    22% 95%,  /* bottom-left */
+    5% 35%    /* top-left */
+  );
+  /* add subtle shadow and background gradient per item using nth-child */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* different colors for each pentagon (make them distinct) */
+.pentagon:nth-child(1) .shape{ background: linear-gradient(135deg, rgba(255,101,101,1), rgba(255,145,120,0.9)); }
+.pentagon:nth-child(2) .shape{ background: linear-gradient(135deg, rgba(255,200,102,1), rgba(255,170,80,0.9)); color:#222; }
+.pentagon:nth-child(3) .shape{ background: linear-gradient(135deg, rgba(120,200,255,1), rgba(80,150,255,0.95)); }
+.pentagon:nth-child(4) .shape{ background: linear-gradient(135deg, rgba(160,120,255,1), rgba(140,90,255,0.95)); }
+
+/* value inside pentagon */
+.value{ display:block; font-size:22px }
+
+/* label under */
+.pentagon p{ color:var(--muted); font-size:14px; }
+
+/* Contact */
+.contact{ padding:40px 0 }
+
+/* Buttons */
+.cta-btn{ background:var(--primary); color:var(--white); border:none; padding:12px 22px; border-radius:16px; cursor:pointer; transition:opacity .15s ease; }
+.cta-btn:hover, .cta-btn:active{ opacity:0.9; }
+
+/* RESPONSIVE (mobile <=480px) */
+@media (max-width:480px){
+  .hero h1{ font-size:28px }
+  .pentagon-grid{ grid-template-columns:1fr; gap:22px }
+  .shape{ width:140px; height:140px }
+}

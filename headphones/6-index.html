@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Headphones — CSS Pentagons</title>
+  <link rel="stylesheet" href="6-styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"><img src="images/logo_headphones.png" alt="Logo"></a>
+
+      <ul class="nav-menu">
+        <li><a href="#what">What we do</a></li>
+        <li><a href="#results">Our results</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="hero">
+      <div class="container">
+        <h1>Feel the sound. Purely CSS.</h1>
+        <p>Our results — pentagons drawn with CSS, no images.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="results" class="our-results container">
+    <h2>Our results speak for themselves</h2>
+    <p class="section-description">Pentagons created with CSS <code>clip-path</code> and colored backgrounds.</p>
+
+    <div class="pentagon-grid">
+      <div class="pentagon">
+        <div class="shape"><span class="value">+2%</span></div>
+        <p>Conversion uplift</p>
+      </div>
+
+      <div class="pentagon">
+        <div class="shape"><span class="value">+50%</span></div>
+        <p>Engagement boost</p>
+      </div>
+
+      <div class="pentagon">
+        <div class="shape"><span class="value">+70%</span></div>
+        <p>Retention increase</p>
+      </div>
+
+      <div class="pentagon">
+        <div class="shape"><span class="value">+100%</span></div>
+        <p>Performance gains</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact simple -->
+  <section id="contact" class="contact container">
+    <h2>Contact us</h2>
+    <form class="contact-form" novalidate>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button class="cta-btn" type="submit">SEND</button>
+    </form>
+  </section>
+
+</body>
+</html>
