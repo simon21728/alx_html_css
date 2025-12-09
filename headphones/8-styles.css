@@ -1,0 +1,75 @@
+/* RESET + VARIABLES */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#FF6565;
+  --white:#fff;
+  --muted:#666;
+  --max-width:1000px;
+}
+
+/* Base */
+body{font-family:"Source Sans Pro",Arial,sans-serif;color:#111;line-height:1.4}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px}
+
+/* Header / Hero */
+.site-header{background:url("images/headphones_hero_1.jpg") no-repeat center/cover;color:var(--white)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo img{height:40px}
+
+/* NAVIGATION */
+.nav-menu{list-style:none;display:flex;gap:32px;align-items:center;transition:max-height 0.4s ease}
+.nav-menu a{color:var(--white);text-decoration:none;transition:color .2s ease}
+.nav-menu a:hover,.nav-menu a:active{color:var(--primary)}
+
+/* Hamburger menu */
+.menu-icon{display:none; flex-direction:column; gap:4px; cursor:pointer; background:none; border:none; padding:0}
+.menu-icon span{width:25px; height:3px; background:#fff; display:block; transition:all .3s ease}
+
+/* Hero */
+.hero{text-align:center;padding:60px 0}
+.hero h1{font-size:40px;margin-bottom:8px}
+.hero p{color:var(--muted)}
+.cta-btn{background:var(--primary); color:var(--white); border:none; padding:12px 26px; border-radius:20px; cursor:pointer; transition:opacity .15s ease}
+.cta-btn:hover,.cta-btn:active{opacity:.9}
+
+/* Sections */
+.what-we-do{text-align:center; padding:60px 0}
+.section-description{color:var(--muted); max-width:700px; margin:8px auto 26px}
+.services{display:flex; gap:24px; justify-content:space-between; margin-top:20px}
+.service{width:22%; text-align:center; transition:transform .4s ease, opacity .4s ease}
+.service span{font-size:52px; color:var(--primary); display:block}
+.service h3{margin-top:12px}
+.service:hover{transform: scale(1.1) rotate(-3deg); opacity:.9; animation:bounce .6s ease}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+.our-results{padding:60px 0; text-align:center}
+.results{display:flex; gap:24px; justify-content:space-between; margin-top:30px}
+.result-item{text-align:center; width:22%; transition:transform .4s ease, opacity .4s ease}
+.result-shape{width:150px; height:150px; border-radius:50%; background:rgba(255,101,101,0.85); margin:0 auto 12px; display:flex; align-items:center; justify-content:center}
+.result-shape h3{color:var(--white); font-size:28px}
+.result-item:hover{transform: rotate(-5deg) scale(1.1); opacity:.9; animation:wobble .8s ease}
+@keyframes wobble{0%,100%{transform:rotate(-5deg)}25%{transform:rotate(5deg)}50%{transform:rotate(-3deg)}75%{transform:rotate(3deg)}}
+
+/* Contact */
+.contact{padding:40px 0}
+.contact-form{margin-top:22px; display:flex; flex-direction:column; gap:14px; max-width:600px; margin-left:auto; margin-right:auto}
+input,textarea{padding:12px; border-radius:8px; border:1px solid #ccc; font-size:15px}
+textarea{min-height:120px; resize:vertical}
+
+/* Footer */
+.site-footer{background:#111; color:#ddd; padding:28px 0; margin-top:40px}
+.footer-inner{display:flex; gap:20px; align-items:center; justify-content:space-between}
+.footer-brand img{height:36px; display:block; margin-bottom:8px}
+.footer-nav a{color:#ddd; text-decoration:none; margin-right:12px}
+.footer-nav a:hover,.footer-nav a:active{color:var(--primary)}
+
+/* MOBILE <=480px */
+@media(max-width:480px){
+  .nav-menu{ display:flex; flex-direction:column; max-height:0; overflow:hidden; transition:max-height .4s ease; width:100%; background:#111; }
+  .nav-menu.active{ max-height:300px; } /* expanded state */
+  .menu-icon{display:flex}
+  .header-inner{align-items:center}
+  .hero h1{font-size:28px}
+  .services,.results{flex-direction:column; align-items:center; gap:22px}
+  .service,.result-item{width:100%; max-width:260px}
+}

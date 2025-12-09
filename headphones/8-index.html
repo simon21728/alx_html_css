@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Headphones — Hamburger Menu</title>
+  <link rel="stylesheet" href="8-styles.css">
+  <link rel="stylesheet" href="holberton_school-icon/style.css">
+</head>
+<body>
+
+  <!-- HEADER + HERO -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#"><img src="images/logo_headphones.png" alt="Logo"></a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#what">What we do</a></li>
+        <li><a href="#results">Our results</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+
+      <button class="menu-icon" id="menu-icon" aria-label="toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="hero">
+      <div class="container">
+        <h1>Responsive & Fun!</h1>
+        <p>Click the hamburger icon on mobile to toggle the menu.</p>
+        <button class="cta-btn">CALL TO ACTION</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHAT WE DO -->
+  <section id="what" class="what-we-do container">
+    <h2>What we do...</h2>
+    <p class="section-description">Fun audio experiences with interactive elements.</p>
+
+    <div class="services">
+      <article class="service">
+        <span class="holberton_school-icon-ic_sound"></span>
+        <h3>Design</h3>
+        <p>Product design & prototyping.</p>
+      </article>
+
+      <article class="service">
+        <span class="holberton_school-icon-ic_music"></span>
+        <h3>Audio</h3>
+        <p>Sound engineering & mastering.</p>
+      </article>
+
+      <article class="service">
+        <span class="holberton_school-icon-ic_video"></span>
+        <h3>Media</h3>
+        <p>Promotional content & video.</p>
+      </article>
+
+      <article class="service">
+        <span class="holberton_school-icon-ic_hearing"></span>
+        <h3>Support</h3>
+        <p>Long term product support.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- OUR RESULTS -->
+  <section id="results" class="our-results container">
+    <h2>Our results speak for themselves</h2>
+    <p class="section-description">Animations & interactivity come together.</p>
+
+    <div class="results">
+      <div class="result-item">
+        <div class="result-shape"><h3>+2%</h3></div>
+        <p>Conversion uplift</p>
+      </div>
+      <div class="result-item">
+        <div class="result-shape"><h3>+50%</h3></div>
+        <p>Engagement boost</p>
+      </div>
+      <div class="result-item">
+        <div class="result-shape"><h3>+70%</h3></div>
+        <p>Retention increase</p>
+      </div>
+      <div class="result-item">
+        <div class="result-shape"><h3>+100%</h3></div>
+        <p>Performance gains</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container">
+    <h2>Contact us</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button class="cta-btn" type="submit">SEND</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#"><img src="images/logo_headphones.png" alt="Logo"></a>
+        <p>© <span id="year"></span> Headphones — All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="#what">What we do</a>
+        <a href="#results">Our results</a>
+        <a href="#contact">Contact us</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="8-script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
